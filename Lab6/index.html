@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid h-100 d-flex justify-content-center align-items-center">
+        <div class="left-side" id="leftside">
+            <h2>Welcome to Hangman!</h2>
+            <p>Choose a category and difficulty level to begin your word-guessing adventure. You have 6 lives and 30 seconds to guess each word!</p>
+            <div class="arrow">→</div>
+        </div>
+        <div class="game-card shadow-lg p-5 right-side">
+            <div id="categorySelect">
+                <label for="category" class="form-label">Choose Category:</label>
+                <select id="category" class="form-select">
+                    <option value="animals">Animals</option>
+                    <option value="movies">Movies</option>
+                    <option value="countries">Countries</option>
+                </select>
+            </div>
+            <div id="levelSelect">
+                <label for="level" class="form-label">Choose Level:</label>
+                <select id="level" class="form-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button id="startGame" class="btn">Start Game</button>
+            </div>
+            <div id="gameArea" style="display: none;">
+                <h2 id="selectedCategory"></h2>
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Timer:</div>
+                        <div id="timer" class="stat-value">00:00</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Lives:</div>
+                        <div id="lives" class="stat-value">6</div>
+                    </div>
+                </div>
+                <div class="hearts-container" id="livesDisplay"></div>
+                <p id="wordProgress"></p>
+                <input type="text" id="guessInput" maxlength="1" placeholder="Enter a letter" disabled>
+                <button id="submitGuess" class="btn" disabled>Submit Guess</button>
+                <button id="hintButton" class="btn" disabled>Use Hint</button>
+                <p id="hint" style="display: none;"></p>
+                <p id="message"></p>
+                <button id="tryagain" class="btn" style="display: none;">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="game.js"></script>
+</body>
+</html>

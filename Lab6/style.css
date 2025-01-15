@@ -1,0 +1,243 @@
+body {
+    min-height: 100vh;
+    /* background-color: #ccc;  */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; 
+}
+
+.container-fluid {
+    min-height: 100vh;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    width: 700px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 2.5rem !important;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.left-side {
+    color: #fff; 
+    max-width: 500px;
+    text-align: center;
+    padding: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.right-side {
+    color: #2c3e50; 
+    max-width: 700px; 
+    text-align: center;
+    padding: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.left-side h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+}
+
+.left-side p {
+    font-size: 1.3rem; 
+    line-height: 1.6;
+    color: #7f8c8d; 
+}
+
+#gameArea {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+#wordProgress {
+    font-size: 3.5rem; 
+    letter-spacing: 1.2rem;
+    margin: 2rem 0;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #34495e; 
+}
+
+#guessInput {
+    text-align: center;
+    font-size: 2rem; 
+    width: 200px; 
+  
+    margin: 1.5rem auto;
+    display: block;
+    border: 3px solid #3498db;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background-color: #fff; 
+    color: #2c3e50; 
+}
+
+#guessInput:focus {
+    outline: none;
+    border-color: #2980b9; 
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+    transform: scale(1.05);
+}
+
+.btn {
+    display: block;
+    width: 280px;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#startGame {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+}
+
+#submitGuess {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+}
+
+#hintButton {
+    background: linear-gradient(45deg, #f1c40f, #f39c12);
+    color: white;
+}
+
+#tryagain {
+    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+    color: white;
+}
+
+.btn:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#hint {
+    color: #f39c12;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: rgba(243, 156, 18, 0.1);
+    border-radius: 15px;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.1);
+}
+
+.difficulty-badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+.difficulty-easy {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.difficulty-medium {
+    background-color: #f39c12;
+    color: white;
+}
+
+.difficulty-hard {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.hearts-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.heart {
+    color: #e74c3c;
+    transition: transform 0.3s ease;
+}
+
+.heart-empty {
+    color: #bdc3c7;
+}
+
+.timer-container {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 1rem 0;
+}
+
+.timer-label {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
